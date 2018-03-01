@@ -1,0 +1,42 @@
+﻿<Window x:Class="GrilleCipher.GrilleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GrilleCipher"
+        mc:Ignorable="d"
+        Title="Grille cipher" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <CheckBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="3" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </Grid>
+</Window>
