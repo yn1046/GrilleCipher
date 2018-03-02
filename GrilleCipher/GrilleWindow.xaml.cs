@@ -23,6 +23,7 @@ namespace GrilleCipher
         public GrilleWindow()
         {
             InitializeComponent();
+            DataContext = new ViewModels.GrilleViewModel();
         }
     }
 }

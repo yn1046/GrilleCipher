@@ -8,6 +8,15 @@ namespace GrilleCipher.Models
 {
     public class Grille
     {
-        bool[,] BooleanMatrix { get; set; } = new bool[3, 3];
+        public List<List<bool>> Pattern { get; set; } = new List<List<bool>>(4)
+        {
+            new List<bool>(4) {false ,false, false, false },
+            new List<bool>(4) {false, false, false, false },
+            new List<bool>(4) {false, false, false, false },
+            new List<bool>(4) {false, false, false, false }
+        };
+        public string InputText { get; set; } = string.Empty;
+        public string OutputText { get; set; } = string.Empty;
+        public string Matrix { get; set; } = string.Empty;
     }
 }
