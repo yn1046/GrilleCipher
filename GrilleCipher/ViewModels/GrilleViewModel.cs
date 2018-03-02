@@ -17,7 +17,6 @@ namespace GrilleCipher.ViewModels
         {
             Model = new Models.Grille();
             DoEncrypt = new DelegateCommand(Encrypt);
-            Model.Pattern.ForEach(o => o.ForEach(n => n = false));
         }
 
         public void Encrypt()
