@@ -41,12 +41,11 @@
         <CheckBox Grid.Row="3" Grid.Column="4" IsChecked="{Binding Model.Pattern[3][3]}" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
         <Label Grid.Row="4" Grid.ColumnSpan="3" Margin="10,0,0,0" Content="Output" Height="30" VerticalAlignment="Top" />
-        <TextBlock Grid.Row="4" Grid.ColumnSpan="3" Margin="10,40,0,0" Height="30" VerticalAlignment="Top" />
-        <TextBlock Grid.Row="4" Grid.ColumnSpan="3" Margin="10,0,10,10" Height="120" VerticalAlignment="Bottom" />
+        <TextBlock Grid.Row="4" Grid.ColumnSpan="3" Text="{Binding TextMatrix}" Margin="10,40,10,10" />
         <Label Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" Margin="10,0,0,0" Content="Decryption" Height="30" VerticalAlignment="Top" />
         <TextBlock Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Top" Height="30" Margin="10,40,10,0" />
         <Label Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" Margin="10,0,10,70" Content="Input" Height="30" VerticalAlignment="Bottom" />
-        <TextBox Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Bottom" Height="25" Margin="10,0,10,40" />
+        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding Model.InputText}" Grid.ColumnSpan="3" VerticalAlignment="Bottom" Height="25" Margin="10,0,10,40" />
         <Button Grid.Row="4" Grid.Column="3" Command="{Binding DoEncrypt}" Grid.ColumnSpan="2" Content="Encrypt" Height="30" Margin="10,0,10,5" VerticalAlignment="Bottom" />
         <Button Grid.Row="4" Grid.Column="5" Command="{Binding DoDecrypt}" Content="Decrypt" Height="30" Margin="10,0,10,5" VerticalAlignment="Bottom" />
 
