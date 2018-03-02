@@ -46,6 +46,7 @@ namespace GrilleCipher.ViewModels
         {
             Model = new Models.Grille();
             DoEncrypt = new DelegateCommand(Encrypt);
+            DoDecrypt = new DelegateCommand(Decrypt);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -106,7 +107,42 @@ namespace GrilleCipher.ViewModels
 
         public void Decrypt()
         {
+            try
+            {
+                var Matrix = new char[4, 4];
+                var MatrixRows = TextMatrix.Replace(" ", "").Split('\n');
+                for (var i = 0; i < 4; i++)
+                {
+                    for (var j = 0; j < 4; j++)
+                    {
+                        Matrix[i, j] = MatrixRows[i][j];
+                    }
+                }
 
+                var Pattern = Model.Pattern;
+                var solution = string.Empty;
+                var n = 0;
+                for (var k = 0; k < 4; k++)
+                {
+                    for (var i = 0; i < 4; i++)
+                    {
+                        for (var j = 0; j < 4; j++)
+                        {
+                            if (Pattern[i][j] && Matrix[i, j] != '-')
+                            {
+                                solution += Matrix[i, j].ToString();
+                            }
+                        }
+                    }
+                    Pattern = Rotate(Pattern);
+                }
+
+                OutputText = solution;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButton.OK);
+            }
         }
 
         private List<List<bool>> Rotate(List<List<bool>> Matrix)
